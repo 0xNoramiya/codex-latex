@@ -24,6 +24,7 @@ This skill packages reusable templates, scripts, and reference guides so Codex c
 - Deterministic utility scripts:
   - project scaffolding
   - compile pipeline (`latexmk`)
+  - direct `.tex` to `.pdf` conversion
   - lint checks (`chktex` + duplicate-label checks)
   - missing citation/label diagnostics
 - Progressive references for writing quality:
@@ -158,6 +159,16 @@ Checks include:
 Checks include:
 - unresolved `\ref`, `\eqref`, `\autoref`, `\cref`, `\Cref`, `\pageref`
 - missing `.bib` keys referenced via `\cite...{}`
+
+### 5) Convert a single TeX file to PDF
+
+```bash
+./codex-latex/scripts/tex_to_pdf.sh /tmp/paper/main.tex --engine pdflatex
+```
+
+Optional flags:
+- `--output-dir /tmp/paper/dist` to control output folder
+- `--clean` to remove auxiliary files after successful conversion
 
 ## Sample Results
 

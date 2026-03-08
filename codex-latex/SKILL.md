@@ -14,6 +14,7 @@ Use this skill to create and maintain publication-ready LaTeX projects with pred
 1. Identify intent:
 - If the user asks to start a paper, scaffold with `scripts/new_paper.sh`.
 - If the user asks to edit an existing paper, preserve class/template choices and patch minimally.
+- If the user asks to convert a `.tex` file directly into PDF, run `scripts/tex_to_pdf.sh`.
 - If the user reports build failures, run `scripts/compile.sh` first to capture deterministic diagnostics.
 - If the user reports citation/reference issues, run `scripts/fixrefs.sh` and then patch affected `.tex`/`.bib` entries.
 
@@ -47,6 +48,12 @@ scripts/new_paper.sh /path/to/paper --template article --title "Paper Title" --a
 
 ```bash
 scripts/compile.sh /path/to/paper --main main.tex --engine pdflatex
+```
+
+### Convert a single TeX file to PDF
+
+```bash
+scripts/tex_to_pdf.sh /path/to/main.tex --engine pdflatex
 ```
 
 ### Lint and style checks
