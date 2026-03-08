@@ -1,0 +1,69 @@
+\documentclass[sigconf]{acmart}
+
+\setcopyright{none}
+\copyrightyear{2026}
+\acmYear{2026}
+\acmDOI{TBD}
+\acmConference[Conference Acronym '26]{Conference Name}{Month Day--Day, 2026}{City, Country}
+\acmBooktitle{Conference Name (Conference Acronym '26), Month Day--Day, 2026, City, Country}
+\acmPrice{15.00}
+\acmISBN{978-x-xxxx-xxxx-x/YY/MM}
+
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+
+\title{Practical Patterns for Deterministic AI-Assisted Writing}
+\author{Noramiya et al.}
+\affiliation{\institution{Institution Name}}
+\email{name@example.com}
+
+\begin{document}
+
+\begin{abstract}
+This ACM-style sample presents practical patterns for deterministic AI-assisted manuscript development.
+The document shows how structured templates, stable citation keys, and explicit verification checks improve reliability.
+It is intended as a shareable baseline for teams adopting the \texttt{codex-latex} skill.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+AI writing pipelines are effective only when they are auditable and easy to revise.
+The sample focuses on simple conventions that reduce formatting drift and reference breakage.
+
+\section{Method}
+Our process combines template scaffolding, constrained editing, and diagnostic checks.
+Each revision is accepted only after compile and cross-reference validation.
+
+\section{Evaluation}
+We summarize outcomes using quality gates rather than model-centric metrics.
+Table~\ref{tab:acm-gates} provides an example report format.
+
+\begin{table}[t]
+  \centering
+  \caption{Illustrative quality-gate outcomes for the workflow.}
+  \label{tab:acm-gates}
+  \begin{tabular}{lc}
+    \toprule
+    Gate & Status \\
+    \midrule
+    Compile pass & Yes \\
+    Citation integrity & Yes \\
+    Label integrity & Yes \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\section{Discussion and Limitations}
+This sample is intentionally concise and does not include dataset-specific details.
+Teams should replace placeholders with venue-required metadata and empirically grounded results.
+
+\section{Conclusion}
+The generated ACM sample is suitable for sharing as a practical starter kit.
+It preserves structure and can be extended without changing the core workflow.
+
+\bibliographystyle{ACM-Reference-Format}
+\bibliography{references}
+
+\end{document}

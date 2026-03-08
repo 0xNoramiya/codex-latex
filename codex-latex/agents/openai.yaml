@@ -1,0 +1,7 @@
+interface:
+  display_name: "Codex LaTeX"
+  short_description: "Research-grade LaTeX paper authoring"
+  icon_small: "./assets/banner-small.svg"
+  icon_large: "./assets/banner-large.svg"
+  brand_color: "#178F98"
+  default_prompt: "Use $codex-latex to create or edit a structured LaTeX research paper and keep references, citations, and formatting consistent."

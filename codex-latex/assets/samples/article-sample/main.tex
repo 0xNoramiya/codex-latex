@@ -1,0 +1,81 @@
+\documentclass[11pt]{article}
+
+\usepackage[margin=1in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[numbers,sort&compress]{natbib}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+
+\title{A Lightweight Baseline for Structured Prompt Auditing}
+\author{Noramiya et al.}
+\date{\today}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This sample demonstrates a compact, publication-style manuscript generated from the \texttt{codex-latex} skill.
+The paper structure enforces stable section ordering, deterministic labels, and consistent bibliography keys.
+A simple auditing baseline is used to show how methods and results can be documented with minimal formatting overhead.
+The template is suitable for early-stage research drafting and can be upgraded to venue-specific classes later.
+\end{abstract}
+
+\section{Introduction}
+Research teams that use AI assistants often need fast paper drafts with reliable formatting.
+We build a baseline workflow that focuses on predictable structure and easy maintenance, following long-standing LaTeX practices \citep{lamport1994}.
+Our goal is not to optimize writing quality directly, but to make the authoring process reproducible.
+
+\section{Method}
+The workflow has three steps: (1) scaffold a project with a selected template, (2) edit sections with stable labels and citation keys, and (3) run compile and reference checks before delivery.
+Equation~\eqref{eq:score} defines a simple audit score used in this sample.
+
+\begin{equation}
+\label{eq:score}
+S = \frac{n_{\text{resolved}}}{n_{\text{total}}}
+\end{equation}
+
+\section{Results}
+Table~\ref{tab:results} shows an example summary.
+The baseline improves reference consistency while keeping document edits small and reviewable.
+
+\begin{table}[t]
+  \centering
+  \caption{Illustrative metrics for the sample workflow. Higher is better.}
+  \label{tab:results}
+  \begin{tabular}{lcc}
+    \toprule
+    Setup & Consistency Score & Edit Churn \\
+    \midrule
+    Ad-hoc drafting & 0.71 & High \\
+    Structured skill workflow & 0.94 & Low \\
+    \bottomrule
+  \end{tabular}
+\end{table}
+
+\begin{figure}[t]
+  \centering
+  \fbox{\rule{0pt}{1.2in}\rule{0.9\linewidth}{0pt}}
+  \caption{Placeholder figure block used to keep the sample self-contained.}
+  \label{fig:placeholder}
+\end{figure}
+
+Figure~\ref{fig:placeholder} demonstrates a shareable figure slot without external assets.
+
+\section{Discussion}
+This sample emphasizes maintainability over novelty.
+In practical projects, teams can replace placeholders with real experiments while preserving labels, citations, and section semantics.
+
+\section{Conclusion}
+The generated manuscript provides a clean baseline for research writing workflows.
+It is immediately shareable and can be adapted to journal or conference templates with minimal migration effort.
+
+\bibliographystyle{plainnat}
+\bibliography{references}
+
+\end{document}

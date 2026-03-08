@@ -1,0 +1,63 @@
+\documentclass[conference]{IEEEtran}
+
+\usepackage{cite}
+\usepackage{amsmath,amssymb}
+\usepackage{graphicx}
+\usepackage{booktabs}
+\usepackage[colorlinks=true,allcolors=blue]{hyperref}
+
+\title{Robust Prompt Routing for Multi-Agent Research Assistants}
+
+\author{\IEEEauthorblockN{Noramiya et al.}}
+
+\begin{document}
+
+\maketitle
+
+\begin{abstract}
+This IEEE-style sample illustrates how the \texttt{codex-latex} skill produces structured technical drafts.
+The workflow prioritizes deterministic reference handling, concise method descriptions, and reproducible section ordering.
+We show a routing baseline for multi-agent research assistants and summarize expected reporting style.
+\end{abstract}
+
+\section{Introduction}
+Multi-agent systems require clear routing rules to map user intent to specialized workers.
+In manuscript preparation, unstable routing often causes inconsistent section depth, missing references, and higher editorial cost.
+This sample demonstrates a robust writing-oriented routing setup.
+
+\section{Related Work}
+Classic LaTeX guidance emphasizes logical structure and consistent typesetting conventions \cite{lamport1994}.
+Recent agentic workflows extend this with deterministic validation passes before publication.
+
+\section{Method}
+We define three routing stages: intent classification, resource selection, and verification.
+Given a task $x$, a controller selects an action path $a$ that minimizes expected correction cost:
+\begin{equation}
+\mathcal{L}(a \mid x) = \alpha E_{\text{format}} + \beta E_{\text{reference}} + \gamma E_{\text{compile}}.
+\end{equation}
+
+\section{Experiments}
+Table~\ref{tab:ieee-results} reports an illustrative comparison.
+
+\begin{table}[t]
+\caption{Illustrative evaluation for routing policies.}
+\label{tab:ieee-results}
+\centering
+\begin{tabular}{lcc}
+\toprule
+Policy & Compile Success & Rework Time \\
+\midrule
+Heuristic only & 82\% & 37 min \\
+Structured routing & 97\% & 14 min \\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\section{Conclusion}
+The sample highlights IEEE-compatible structure and reporting style.
+It can be reused as a starter document when sharing the skill with teams that submit to IEEE venues.
+
+\bibliographystyle{IEEEtran}
+\bibliography{references}
+
+\end{document}
